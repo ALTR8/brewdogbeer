@@ -1,0 +1,129 @@
+div.container{
+    background-color: #003768;
+    margin: 0 auto;
+}
+
+.beerList{
+  padding-top: 100px;
+  -webkit-columns: 5 150px;
+  -moz-columns: 5 150px;
+  columns: 5 150px;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+}
+
+.imgbox{
+    height: 300px;
+    width: 300px;
+    padding-bottom: 30%;
+}
+
+
+img{
+  background-color: black;
+  margin-left: 30%;
+  column-count: 5
+  border-radius: 25px;
+  border: 5px;
+  border-color: black;
+}
+
+.title{
+    background-image: url("../images/brewery-large.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+   
+}
+
+h1.titletext {
+    position: :static;
+    font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 2em;
+    border-style: solid
+    letter-spacing: .2em;
+    line-height: 1.1em;
+    margin:0px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 30px; 
+    padding-top: 600px;
+    color: black;
+}
+
+.titlestyle {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 4px white solid;
+    background-color: white;
+}
+
+.beer {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.beer .popup{
+    visibility: hidden;
+    width: 160px;
+    background-color: magenta;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px 0;
+    position: static;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.beer .popup::after {
+    content: "";
+    position: static;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.beer .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.extras{
+    visibility: hidden;
+    width: 160px;
+}
+
+.extras::after {
+    content: "";
+    position: absolute;
+   
+}
+
+div.extras.show{
+    visibility: visible;
+    color: yellow;
+    text-align: center;
+    padding-left: 15%;
+}
