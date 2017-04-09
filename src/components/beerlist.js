@@ -17,9 +17,11 @@ export default class BeerList extends React.Component {
 			return(
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-3 col-md-6">
-					{beers}
-					</div>
+					<span className="allbeers">
+						<div className="col-sm-3 col-md-6">
+						{beers}
+						</div>
+					</span>
 				</div>
 			</div>
 			)

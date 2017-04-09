@@ -4,11 +4,30 @@ body {
 }
 
 .beer {
-  margin-left: 50px;
-  margin-top: 30px;
-  color: black;
+  columns: 3 10px;
+  margin-left: 20px;
+  margin-top: 15px;
+  color: blue;
 }
 
-.details{
-  align-content: left;
+.textstyle{
+  background-color: white;
+  border-radius: 5px;
+  height: 20px;
+  border-width: 20px;
+}
+
+.detailstyle {
+  background-color: white;
+  text-align: bottom;
+}
+
+.beerInfo {
+  align-self: center;
+  text-align: center;
+   position: fixed;
+   bottom: 50px;
+   width: 95%;
+   height: 90px;
+   background-color: white;
 }

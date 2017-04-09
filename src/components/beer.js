@@ -38,12 +38,18 @@ class Beer extends Component {
     return (
       <div onClick={this.toggleDetails}>
         <div className="beer col-xs-12">
-          {this.props.beer.name}
+          <span className="textstyle">
+            {this.props.beer.name}
+          </span>
         </div>
-        <div className="details col-xs-12">
-          {this.showDetails()}
+        <div className="toggleDetails">
+          <div className="details col-m-6">
+            <span className="detailstyle">
+              {this.showDetails()}
+            </span>
+          </div>
         </div>
-      </div>
+        </div>
     )
   }
 }
