@@ -1,6 +1,9 @@
 body {
-   background-color: #cccccc;
    background-image: url("../public/images/brewery-large.jpg")
+}
+
+html {
+  padding-top: 50px;
 }
 
 .beer {
@@ -23,9 +26,10 @@ body {
 .beerInfo {
   align-self: center;
   text-align: center;
-   position: fixed;
-   bottom: 45px;
-   width: 95%;
-   height:px;
-   background-color: white;
+  position: fixed;
+  bottom: 50px;
+  width: 95%;
+  border-radius: 5px;
+  border-color: black;
+  background-color: white;
 }
