@@ -5,16 +5,18 @@ class Beer extends Component {
     super()
     this.state = {
       showDetails: false,
-      popUpDetails: false
     }
     this.toggleDetails = this.toggleDetails.bind(this)
-    this.togglePopUp = this.togglePopUp.bind(this)
   }
 
   showDetails(){
     let markup
     if (this.state.showDetails){
-      markup = <div> abv: {this.props.beer.abv} food pairings: {this.props.beer.food_pairing[0]}, {this.props.beer.food_pairing[1]}, {this.props.beer.food_pairing[2]} </div>
+      markup = <div className="beerInfo">
+      <div className="description"> {this.props.beer.description} </div>
+        <div className="smallDetails"> abv: {this.props.beer.abv} first brewed: {this.props.beer.first_brewed} </div>
+        <div className="foodPairing">food pairing suggestions: {this.props.beer.food_pairing[0]}, {this.props.beer.food_pairing[1]}, {this.props.beer.food_pairing[2]} </div>
+        </div>
     } else {
       markup = null
     }
@@ -23,17 +25,6 @@ class Beer extends Component {
     )
   }
 
-  popUpDetails(){
-    let popUpText
-    if (this.state.popUpDetails){
-      popUpText = <div> description: {this.props.beer.description} first brewed: {this.props.beer.first_brewed} </div>
-    } else {
-      popUpText = null
-    }
-    return(
-      popUpText
-    )
-  }
 
   toggleDetails(){
     this.setState({
@@ -41,23 +32,16 @@ class Beer extends Component {
     })
   }
 
-  togglePopUp(){
-    this.setState({
-      popUpDetails: !this.state.popUpDetails
-    })
-  }
+
 
   render(){
     return (
-      <div onClick={this.toggleDetails} onMouseEnter={this.togglePopUp} onMouseExit={this.togglePopUp}>
-        <div>
+      <div onClick={this.toggleDetails}>
+        <div className="beer col-xs-12">
           {this.props.beer.name}
         </div>
-        <div className="click">
+        <div className="details col-xs-12">
           {this.showDetails()}
-        </div>
-        <div className="popUp">
-          {this.popUpDetails()}
         </div>
       </div>
     )

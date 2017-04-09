@@ -1,24 +1,14 @@
-.App {
-  text-align: center;
+body {
+   background-color: #cccccc;
+   background-image: url("../public/images/brewery-large.jpg")
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.beer {
+  margin-left: 50px;
+  margin-top: 30px;
+  color: black;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.details{
+  align-content: left;
 }
