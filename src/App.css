@@ -12,9 +12,12 @@ body {
 
 .textstyle{
   background-color: white;
-  border-radius: 5px;
-  height: 20px;
-  border-width: 20px;
+  background-image: -webkit-radial-gradient(50% 0, ellipse, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-radial-gradient(50% 0, ellipse, rgba(255, 255, 255, 0.65) 25%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-radial-gradient(50% 0, ellipse, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: radial-gradient(50% 0, ellipse, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 300%;
+  background-position: 55% 65%;
 }
 
 .detailstyle {
@@ -26,8 +29,8 @@ body {
   align-self: center;
   text-align: center;
    position: fixed;
-   bottom: 50px;
+   bottom: 45px;
    width: 95%;
-   height: 90px;
+   height: 100px;
    background-color: white;
 }
