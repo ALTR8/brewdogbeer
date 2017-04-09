@@ -6,12 +6,22 @@ html {
   padding-top: 50px;
 }
 
+.title {
+  text-align: center;
+  align-self: center;
+  background-color: white;
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 350px;
+}
+
 .beer {
   columns: 3 10px;
   margin-left: 20px;
   margin-top: 15px;
   color: blue;
 }
+
 
 .btn{
   background-color: white;
@@ -33,3 +43,4 @@ html {
   border-color: black;
   background-color: white;
 }
+

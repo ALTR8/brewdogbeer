@@ -18,7 +18,7 @@ class Beer extends Component {
         <div className="foodPairing">food pairing suggestions: {this.props.beer.food_pairing[0]}, {this.props.beer.food_pairing[1]}, {this.props.beer.food_pairing[2]} </div>
       </div>
     } else {
-      markup = null
+      markup
     }
     return (
       markup
@@ -36,7 +36,7 @@ class Beer extends Component {
 
   render(){
     return (
-      <div onClick={this.toggleDetails}>
+      <div onMouseEnter={this.toggleDetails} onMouseLeave={this.toggleDetails}>
         <div className="beer col-xs-12">
           <button type="button" className="btn">
             {this.props.beer.name}
