@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import BeerList from './components/beerlist'
+import Beer from './components/beer'
+import Title from './components/title'
 import './App.css';
 import axios from 'axios';
 
@@ -23,8 +25,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="beer">
-        <BeerList beerList={this.state.beerList} />
+      <div>
+        <Title />
+        <div className="beer">
+          <BeerList beerList={this.state.beerList} />
+        </div>
       </div>
   )}
 }
