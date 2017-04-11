@@ -13,6 +13,9 @@ html {
   border-radius: 5px;
   width: 50%;
   margin-left: 350px;
+  color: blue;
+  border: 2px solid #000034;
+  
 }
 
 .beer {
@@ -34,7 +37,7 @@ html {
 }
 
 .beerInfo {
-  align-self: center;
+  margin: auto;
   text-align: center;
   position: fixed;
   bottom: 50px;
@@ -42,5 +45,6 @@ html {
   border-radius: 5px;
   border-color: black;
   background-color: white;
+  color: blue;
 }
 

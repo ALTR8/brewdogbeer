@@ -36,10 +36,11 @@ class App extends Component {
     return (
       <div>
         <Title />
-        <div className="beer">
-          <BeerList beerList={this.state.beerList} switchBeer={this.switchBeer}/>
+          <div className="beer">
+            <BeerList beerList={this.state.beerList} switchBeer={this.switchBeer}/>
+          </div>
           {Object.keys(this.state.beer).length === 0 ? null : <ShowDetails beer={this.state.beer}/>}
-        </div>
+        
       </div>
   )}
 }

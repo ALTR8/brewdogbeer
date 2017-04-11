@@ -10,18 +10,12 @@ class Beer extends Component {
   render(){
     return (
       <div onMouseEnter={this.props.switchBeer}>
-        <div className="beer col-xs-12">
+        <div className="beer col-s-3">
           <button type="button" className="btn">
             {this.props.beer.name}
           </button>
         </div>
-        <div className="toggleDetails">
-          <div className="details col-m-6">
-            <span className="detailstyle">
-            </span>
-          </div>
-        </div>
-        </div>
+      </div>
     )
   }
 }
