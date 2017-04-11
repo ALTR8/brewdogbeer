@@ -12,7 +12,7 @@ export default class BeerList extends React.Component {
 
 		render() {
 			const beers = this.props.beerList.map((beer) => {
-				return <Beer beer={beer} />
+				return <Beer beer={beer} switchBeer={this.props.switchBeer.bind(null, beer)} />
 			})
 			return(
 			<div className="container">

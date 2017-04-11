@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BeerList from './components/beerlist'
 import Beer from './components/beer'
 import Title from './components/title'
+import ShowDetails from './components/showdetails'
 import './App.css';
 import axios from 'axios';
 
@@ -10,8 +11,16 @@ class App extends Component {
     super()
 
     this.state = {
-      beerList: []
+      beerList: [],
+      beer: {}
     }
+    this.switchBeer = this.switchBeer.bind(this)
+  }
+
+  switchBeer(currentBeer){
+    this.setState({
+      beer: currentBeer
+    })
   }
 
   componentWillMount(){
@@ -28,7 +37,8 @@ class App extends Component {
       <div>
         <Title />
         <div className="beer">
-          <BeerList beerList={this.state.beerList} />
+          <BeerList beerList={this.state.beerList} switchBeer={this.switchBeer}/>
+          {Object.keys(this.state.beer).length === 0 ? null : <ShowDetails beer={this.state.beer}/>}
         </div>
       </div>
   )}
