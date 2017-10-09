@@ -5,7 +5,7 @@ export default class ShowDetails extends Component {
 
 	render(){
 		return(
-		<div className="col-lg-1 col-centered">
+		<div className="col-lg-1">
 			<div className="beerInfo">
         		<div className="description"> {this.props.beer.description} </div>
         		<div className="smallDetails"> abv: {this.props.beer.abv} first brewed: {this.props.beer.first_brewed} </div>
@@ -16,7 +16,3 @@ export default class ShowDetails extends Component {
 		)
 	}
 }
-
-
-
-

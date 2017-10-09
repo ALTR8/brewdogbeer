@@ -1,21 +1,22 @@
 body {
-   background-image: url("../public/images/brewery-large.jpg")
+    background-image: url("../public/images/brewery-large.jpg");
+    background-color: black;
+    background-size: cover;
+    padding-bottom: 150px;
 }
 
 html {
   padding-top: 50px;
 }
 
+img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .title {
-  text-align: center;
-  align-self: center;
-  background-color: white;
-  border-radius: 5px;
-  width: 50%;
-  margin-left: 350px;
-  color: blue;
-  border: 2px solid #000034;
-  
+  margin-left: 40%;
 }
 
 .beer {
@@ -23,12 +24,32 @@ html {
   margin-left: 20px;
   margin-top: 15px;
   color: blue;
+  font-weight: bold;
 }
 
-
 .btn{
-  background-color: white;
-  border-color: black; 
+    display: inline-block;
+    outline: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: white;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 0px solid transparent;
+}
+
+.beerbtn:hover {
+    color: magenta;
 }
 
 .detailstyle {
@@ -43,8 +64,7 @@ html {
   bottom: 50px;
   width: 95%;
   border-radius: 5px;
-  border-color: black;
+  border: 10px solid black;
   background-color: white;
-  color: blue;
+  color: magenta;
 }
-

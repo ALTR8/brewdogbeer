@@ -13,19 +13,26 @@ class App extends Component {
     this.state = {
       beerList: [],
       beer: {}
-    }
-    this.switchBeer = this.switchBeer.bind(this)
-  }
+  };
+    this.switchBeer = this.switchBeer.bind(this);
+    this.removeBeer = this.removeBeer.bind(this);
+};
 
   switchBeer(currentBeer){
     this.setState({
       beer: currentBeer
-    })
-  }
+  });
+  };
+
+  removeBeer(currentBeer) {
+      this.setState({
+          beer: {}
+      });
+  };
 
   componentWillMount(){
     axios
-      .get('https://api.punkapi.com/v2/beers')
+      .get('https://api.punkapi.com/v2/beers?abv_gt=2&per_page=80')
       .then(({data}) => {
         this.setState({ beerList: data })
       })
@@ -35,12 +42,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Title />
-          <div className="beer">
-            <BeerList beerList={this.state.beerList} switchBeer={this.switchBeer}/>
+          <div className="background">
+            // <Title />
+              <div className="beer">
+                <BeerList beerList={this.state.beerList} switchBeer={this.switchBeer} removeBeer={this.removeBeer}/>
+              </div>
+              {Object.keys(this.state.beer).length === 0 ? null : <ShowDetails beer={this.state.beer}/>}
           </div>
-          {Object.keys(this.state.beer).length === 0 ? null : <ShowDetails beer={this.state.beer}/>}
-        
       </div>
   )}
 }

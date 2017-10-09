@@ -9,9 +9,9 @@ class Beer extends Component {
 
   render(){
     return (
-      <div onMouseEnter={this.props.switchBeer}>
-        <div className="beer col-s-3">
-          <button type="button" className="btn">
+      <div>
+        <div className="beer col-sm-6 col-centered">
+          <button type="button" className="btn beerbtn" data-toggle="modal" data-target="#myModal" onMouseEnter={this.props.switchBeer} onMouseLeave={this.props.removeBeer}>
             {this.props.beer.name}
           </button>
         </div>
